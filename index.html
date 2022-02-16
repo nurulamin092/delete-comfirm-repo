@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>more event</title>
+    <title>Delete Confirm</title>
 </head>
 
 <body>
-    <h2>More Events</h2>
+    <h2>Event</h2>
     <section>
         <h3 id="secret-info">Very very secret information</h3>
         <input type="text" id="delete-confirm" placeholder="please type delete">
@@ -17,71 +17,7 @@
 
     </section>
 
-    <script>
-        document.getElementById('delete-btn').
-            addEventListener('click', function () {
-                document.getElementById('secret-info').style.display = 'none';
 
-            });
-
-        //fucus
-        document.getElementById('delete-confirm').
-            addEventListener('focus', function () {
-                document.body.style.backgroundColor = 'lightcoral';
-            });
-
-        //blar 
-        document.getElementById('delete-confirm').
-            addEventListener('blur', function () {
-                document.body.style.backgroundColor = 'white';
-            });
-
-        //keydwon
-
-        /*   document.getElementById('delete-confirm').
-              addEventListener('keydown', function () {
-                  const deleteField = document.getElementById('delete-confirm');
-                  console.log(deleteField.value);
-              }); */
-        //keypress
-        /* document.getElementById('delete-confirm').addEventListener('keypress', function () {
-            const deleteField = document.getElementById('delete-confirm');
-            console.log(deleteField.value);
-        }); */
-
-        /*   // keyup 
-          document.getElementById('delete-confirm').
-              addEventListener('keyup', function (event) {
-                  const deleteBtn = document.getElementById('delete-btn');
-                  if (event.target.value == 'delete') {
-  
-                      deleteBtn.removeAttribute('disabled');
-                  }
-                  else {
-                      deleteBtn.setAttribute('disabled', true);
-                  }
-              }); */
-
-        //keyup
-        document.getElementById('delete-confirm').
-            addEventListener('keyup', function (event) {
-                const deleteBtn = document.getElementById('delete-btn');
-                if (event.target.value == 'delete') {
-                    deleteBtn.removeAttribute('disabled');
-                }
-                else {
-                    deleteBtn.setAttribute('disabled', true);
-                }
-            });
-        // change 
-
-        document.getElementById('delete-confirm').
-            addEventListener('change', function () {
-                const deleteField = document.getElementById('delete-confirm');
-                console.log(deleteField.value);
-            });
-
-    </script>
 </body>
 
 </html>
